@@ -1,3 +1,3 @@
-# Test
-First Repo Test
-This is a testo for code sharing , docs or anything related to CSO EMEA Team
+# CSO Toolkit
+
+This is the repository for sharing the code written by the members of Pivotal CSO team to support the customer operations with Greenplum and HAWQ
