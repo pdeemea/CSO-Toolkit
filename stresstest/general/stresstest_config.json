@@ -1,0 +1,36 @@
+{
+    "database": "dssprod",
+    "username": "stresstest",
+    "username_read": "stresstestread",
+    "logs_directory": "/home/gpadmin/stresstest/logs",
+    "tests": [
+            {
+                "test_name":"disk5",
+                "test_runtime_seconds": 3600,
+                "readers": {
+                    "stresstest_sqls_file": "/home/gpadmin/stresstest/conf/stresstest_queries_big.sql",
+                    "available_tests": ["cpu", "memory", "disk", "network", "mixed"],
+                    "tests_to_run": ["disk"],
+                    "test_threads_number": 5
+                },
+                "writers": {
+                    "sql_files_directory": "/home/gpadmin/stresstest/sql",
+                    "test_threads_number": 5
+                }
+            },
+            {
+                "test_name":"test2",
+                "test_runtime_seconds": 600,
+                "readers": {
+                    "stresstest_sqls_file": "/home/gpadmin/stresstest/conf/stresstest_queries_big.sql",
+                    "available_tests": ["cpu", "memory", "disk", "network", "mixed"],
+                    "tests_to_run": ["cpu"],
+                    "test_threads_number": 30
+                },
+                "writers": {
+                    "sql_files_directory": "/home/gpadmin/stresstest/sql",
+                    "test_threads_number": 5
+                }
+            }
+        ]
+}
